@@ -7,7 +7,7 @@ using System.Reflection.Emit;
 
 public class HELPER007 : MonoBehaviour
 {
-
+   
     private class Util
     {
         public static string ArrToStr<T>(Func<T, string> func, IEnumerable<T> ts)
@@ -210,7 +210,7 @@ public class HELPER007 : MonoBehaviour
             void SetTable(Dictionary<string, object> table);
         }
    
-
+        
 
         public class WorkBench : IWorkSpaceElement
         {
@@ -989,7 +989,7 @@ public class HELPER007 : MonoBehaviour
                     .AddCommand("loadNames", _LoadNames)
                     .AddCommand("getName", _GetName)
                     .AddCommand("getType", _GetType)
-                    .AddCommand("getVal",_GetVal)
+                    .AddCommand("getVal", _GetVal)
                     .Build();
             }
         }
@@ -1693,13 +1693,13 @@ public class HELPER007 : MonoBehaviour
                 return ConstructedTool.CreateBuilder()
                     .SetDefault(_default)
                     .AddCommand("help", _help)
-                    .AddCommand("setName",_setName)
-                    .AddCommand("setTypeAddr",_setTypeAddr)
-                    .AddCommand("setParams",_setParams)
-                    .AddCommand("setTarget",_setTarget)
-                    .AddCommand("retrieve",_retrieve)
-                    .AddCommand("cancel",_cancel)
-                    .AddCommand("clear",_clear)
+                    .AddCommand("setName", _setName)
+                    .AddCommand("setTypeAddr", _setTypeAddr)
+                    .AddCommand("setParams", _setParams)
+                    .AddCommand("setTarget", _setTarget)
+                    .AddCommand("retrieve", _retrieve)
+                    .AddCommand("cancel", _cancel)
+                    .AddCommand("clear", _clear)
                     .Build();
             }
         }
@@ -1745,7 +1745,7 @@ public class HELPER007 : MonoBehaviour
             }
             private static string _help(ConstructedTool.Data data)
             {
-                return "MethodInvoder with commands : help, setMethod, setTarget, setArgs, setOut, invoke, cancel, clear";
+                return "MethodInvoker with commands : help, setMethod, setTarget, setArgs, setOut, invoke, cancel, clear";
             }
             private static string __setField(ConstructedTool.Data data, bool seekEmpty, string fieldTag, Func<object,bool> test, string testFailMsg, string fieldName)
             {
@@ -1806,7 +1806,7 @@ public class HELPER007 : MonoBehaviour
             private static string _setOut(ConstructedTool.Data data)
             {
                 string testFailMsg = "<THIS TEXT SHOULD NOT APPEAR>";
-                return __setField(data, true, OUT, x=>false, testFailMsg, "ouput-address");
+                return __setField(data, true, OUT, x=>false, testFailMsg, "output-address");
             }
             private struct NameTag { public string name; public string tag; public NameTag(string n, string t) { name = n; tag = t; } }
             private static IEnumerable<NameTag> __nameTags()
@@ -1884,14 +1884,14 @@ public class HELPER007 : MonoBehaviour
             {
                 return ConstructedTool.CreateBuilder()
                     .SetDefault(_default)
-                    .AddCommand("help",_help)
-                    .AddCommand("setMethod",_setMethod)
-                    .AddCommand("setTarget",_setTarget)
-                    .AddCommand("setArgs",_setArgs)
-                    .AddCommand("setOut",_setOut)
-                    .AddCommand("invoke",_invoke)
-                    .AddCommand("cancel",_cancel)
-                    .AddCommand("clear",_clear)
+                    .AddCommand("help", _help)
+                    .AddCommand("setMethod", _setMethod)
+                    .AddCommand("setTarget", _setTarget)
+                    .AddCommand("setArgs", _setArgs)
+                    .AddCommand("setOut", _setOut)
+                    .AddCommand("invoke", _invoke)
+                    .AddCommand("cancel", _cancel)
+                    .AddCommand("clear", _clear)
                     .Build();
             }
         }
@@ -1926,9 +1926,9 @@ public class HELPER007 : MonoBehaviour
 
             return ConstructedTool.CreateBuilder()
                 .SetDefault(_default)
-                .AddCommand("help",_help)
-                .AddCommand("del",_del)
-                .AddCommand("exit",_exit)
+                .AddCommand("help", _help)
+                .AddCommand("del", _del)
+                .AddCommand("exit", _exit)
                 .Build();
         }
 
@@ -2152,7 +2152,7 @@ public class HELPER007 : MonoBehaviour
     // * cleaner-tool with comands : help, del, exit
     // * object-Arraybuilder with commands : help, cancel, clear, 
     //                                       setTarget, add, build
-    // * MethodInvoder with commands : help, setMethod, setTarget, 
+    // * MethodInvoker with commands : help, setMethod, setTarget, 
     //                                 setArgs, setOut, invoke, cancel, clear
     // GOAL : get the method 'GetMethods'
     #endregion
