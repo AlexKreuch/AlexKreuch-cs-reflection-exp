@@ -1,5 +1,5 @@
-Experimental project that implements a pseudo-command line interface to access C# APIs via the System.Reflection Namespace.
-This is a Unity Project that contains a source file that implements the command line interface. The source file could be modified
+Experimental project that implements a pseudo-command processing interface to access C# APIs via the System.Reflection Namespace.
+This is a Unity Project that contains a source file that implements the interface. The source file could be modified
 to be included in other types of C\# projects. Commands are entered via a Unity object durring the Update() method.
 The states and commands are listed below.
 
